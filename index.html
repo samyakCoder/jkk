@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7f5" />
+  <meta name="description" content="A practical inspection workspace for packaged commodity declarations and Legal Metrology compliance." />
+  <title>PackSure — Legal Metrology Compliance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="PackSure home">
+        <span class="brand-mark"><svg viewBox="0 0 28 28" fill="none"><path d="M14 2.5 24 8v12l-10 5.5L4 20V8l10-5.5Z" stroke="currentColor" stroke-width="1.8"/><path d="m9.5 14 3 3 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-copy"><strong>PackSure</strong><small>COMPLIANCE DESK</small></span>
+      </a>
+      <div class="workspace-label">WORKSPACE <span>⌄</span></div>
+      <div class="workspace-switch"><span class="workspace-avatar">MH</span><span><strong>West Zone Office</strong><small>Enforcement workspace</small></span><span class="chevron">⌄</span></div>
+      <div class="nav-label">MONITORING</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-link active" href="#overview" data-view="overview"><span class="nav-icon">▦</span>Overview</a>
+        <a class="nav-link" href="#inspections" data-view="inspections"><span class="nav-icon">⌕</span>Product inspections<span class="nav-count">12</span></a>
+        <a class="nav-link" href="#scan" data-view="scan"><span class="nav-icon">⊕</span>Scan a product</a>
+        <a class="nav-link" href="#reports" data-view="reports"><span class="nav-icon">▤</span>Reports</a>
+      </nav>
+      <div class="nav-label second-label">MANAGE</div>
+      <nav class="nav-list">
+        <a class="nav-link" href="#rules" data-view="rules"><span class="nav-icon">☷</span>Rule library</a>
+        <a class="nav-link" href="#team" data-view="team"><span class="nav-icon">♙</span>Team &amp; access</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-spark">✳</span><strong>Need a hand?</strong><p>Explore the inspection guide and get more from PackSure.</p><button class="text-button" id="guide-button">Open quick guide <span>→</span></button></div>
+        <button class="profile"><span class="profile-avatar">AK</span><span class="profile-copy"><strong>Arjun Kulkarni</strong><small>Senior Inspector</small></span><span class="profile-menu">•••</span></button>
+      </div>
+    </aside>
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>West Zone Office</span><span class="crumb-slash">/</span><strong id="crumb-current">Overview</strong></div>
+        <div class="top-actions"><span class="office-pill"><i></i> Workspace active</span><button class="icon-button" aria-label="Notifications" id="notification-button"><span>♧</span><i class="notification-dot"></i></button><span class="top-divider"></span><button class="top-profile"><span class="mini-avatar">AK</span><span>Arjun K.</span><span class="chevron">⌄</span></button></div>
+      </header>
+      <div class="page-content" id="page-content"></div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="file-input" accept="image/*" multiple hidden />
+  <script src="app.js"></script>
+</body>
+</html>
